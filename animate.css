@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background: url(https://img.freepik.com/free-vector/urban-road-with-cars-landscape_102902-2271.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Caso a imagem não cubra totalmente a tela, esse comando a estica */
+}
+
+.titulo {
+    top: 300px;
+    left: 300px;
+    position: absolute;
+    color: black;
+    padding: 5px;
+    border: 1px solid blue;
+    border-radius: 50px;
+    background-color: lightgray;
+}
+
+.corredor {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    background: url(sprite/ben10.png);
+    height: 99px;
+    width: calc(636px/8);
+    animation: correr .6s steps(8) infinite,
+        mover 8s linear infinite;
+}
+
+.corredor-2 {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    background: url(sprite/ben10.png);
+    height: 99px;
+    width: calc(636px/8);
+    animation: correr .6s steps(8) infinite,
+        mover 10s linear infinite;
+}
+
+.corredor-3 {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    background: url(sprite/ben10.png);
+    height: 99px;
+    width: calc(636px/8);
+    animation: correr .6s steps(8) infinite,
+        mover 12s linear infinite;
+}
+
+.corredor-4 {
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    background: url(sprite/ben10\ -\ Copia.png);
+    height: 99px;
+    width: calc(636px/8);
+    animation: correr .6s steps(8) infinite,
+        moverinverso 7s linear infinite;
+}
+
+.corredor-5 {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    background: url(sprite/ben10.png);
+    height: 99px;
+    width: calc(636px/8);
+    animation: correrinverso .6s steps(8) infinite,
+        voar 10s linear infinite;
+}
+
+@keyframes correr {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -636px;
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(1800px);
+    }
+}
+
+@keyframes voar {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes moverinverso {
+    0% {
+        transform: translateX(1080px);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes correrinverso {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -636px;
+    }
+}
